@@ -1,7 +1,8 @@
 import torch
 import pickle
 import numpy as np
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+device = torch.device("cuda" if torch.cuda.is_available() else 
+                      "mps" if torch.backends.mps.is_available() else "cpu")
 
 class AttrDict(dict):
     def __init__(self, *args, **kwargs):

@@ -14,8 +14,9 @@ import numpy as np
 from utils import CTCLabelConverter, AttnLabelConverter, Averager
 from dataset import hierarchical_dataset, AlignCollate, Batch_Balanced_Dataset
 from model import Model
-from test import validation
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+from testt import validation
+device = torch.device("cuda" if torch.cuda.is_available() else 
+                      "mps" if torch.backends.mps.is_available() else "cpu")
 
 def count_parameters(model):
     print("Modules, Parameters")
@@ -67,7 +68,7 @@ def train(opt, show_number = 2, amp=False):
           opt.SequenceModeling, opt.Prediction)
 
     if opt.saved_model != '':
-        pretrained_dict = torch.load(opt.saved_model)
+        pretrained_dict = torch.load(opt.saved_model, map_location=device)
         if opt.new_prediction:
             model.Prediction = nn.Linear(model.SequenceModeling_output, len(pretrained_dict['module.Prediction.weight']))  
         
