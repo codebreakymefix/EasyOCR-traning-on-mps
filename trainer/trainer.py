@@ -9,6 +9,7 @@ from utils import AttrDict
 import pandas as pd
 cudnn.benchmark = False
 cudnn.deterministic = False
+import torch
 
 def get_config(file_path):
     with open(file_path, 'r', encoding="utf8") as stream:
@@ -28,6 +29,13 @@ def get_config(file_path):
     os.makedirs(f'./saved_models/{opt.experiment_name}', exist_ok=True)
     return opt
 
+
+# print("Torch version:", torch.__version__)
+# print("CUDA available:", torch.cuda.is_available())
+# print("CUDA device count:", torch.cuda.device_count())
+# print("Current device:", torch.cuda.current_device())
+# print("Device name:", torch.cuda.get_device_name(0))
+
 opt = get_config("trainer/config_files/en_filtered_config.yaml")
 if __name__ == '__main__':
-    train(opt, amp=False)
+    train(opt, amp=True)

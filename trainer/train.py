@@ -8,7 +8,7 @@ import torch.nn as nn
 import torch.nn.init as init
 import torch.optim as optim
 import torch.utils.data
-from torch.cuda.amp import autocast, GradScaler
+from torch.amp import autocast, GradScaler
 import numpy as np
 
 from utils import CTCLabelConverter, AttnLabelConverter, Averager
@@ -170,7 +170,7 @@ def train(opt, show_number = 2, amp=False):
     best_norm_ED = -1
     i = start_iter
 
-    scaler = GradScaler()
+    scaler = GradScaler(device)
     t1= time.time()
         
     while(True):
@@ -178,7 +178,7 @@ def train(opt, show_number = 2, amp=False):
         optimizer.zero_grad(set_to_none=True)
         
         if amp:
-            with autocast():
+            with autocast('cuda'):
                 image_tensors, labels = train_dataset.get_batch()
                 image = image_tensors.to(device)
                 text, length = converter.encode(labels, batch_max_length=opt.batch_max_length)

@@ -5,17 +5,17 @@ experiment_name: 'en_filtered'
 train_data: 'trainer/all_data/train'
 valid_data: 'trainer/all_data/test'
 manualSeed: 1111
-workers: 13
+workers: 12
 batch_size: 256 #32
-num_iter: 2
-valInterval: 2
+num_iter: 1000
+valInterval: 200
 saved_model: 'trainer/saved_models/english_g2.pth'
-FT: False
-optim: False # default is Adadelta
-lr: 1.
+FT: True
+optim: adam            # switch to Adam for sharper fine-tune
+lr: 5e-4               # moderate LR for head
 beta1: 0.9
 rho: 0.95
-eps: 0.00000001
+eps: 1e-8
 grad_clip: 5
 
 #Data processing
@@ -43,5 +43,5 @@ output_channel: 256
 hidden_size: 256
 decode: 'greedy'
 new_prediction: False
-freeze_FeatureFxtraction: False
+freeze_FeatureFxtraction: True
 freeze_SequenceModeling: True
