@@ -7,9 +7,9 @@ valid_data: 'trainer/all_data/test'
 manualSeed: 1111
 workers: 12
 batch_size: 256 #32
-num_iter: 8100
-valInterval: 2025
-saved_model: 'trainer/saved_models/adam1kheadonly.pth'
+num_iter: 2
+valInterval: 2
+saved_model: 'trainer/saved_models/best_accuracy.pth'
 FT: True
 optim: adam            # switch to Adam for sharper fine-tune
 lr: 5e-4               # moderate LR for head
@@ -33,7 +33,7 @@ contrast_adjust: 0.0
 data_filtering_off: False
 
 # Model Architecture
-Transformation: 'None'
+Transformation: 'TPS'
 FeatureExtraction: 'VGG'
 SequenceModeling: 'BiLSTM'
 Prediction: 'CTC'

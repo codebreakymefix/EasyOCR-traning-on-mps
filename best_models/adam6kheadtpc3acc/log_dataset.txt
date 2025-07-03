@@ -1,0 +1,15 @@
+--------------------------------------------------------------------------------
+dataset_root: trainer/all_data/train
+opt.select_data: ['']
+opt.batch_ratio: ['1']
+--------------------------------------------------------------------------------
+dataset_root:    trainer/all_data/train	 dataset: 
+sub-directory:	/.	 num samples: 32369
+num total samples of : 32369 x 1.0 (total_data_usage_ratio) = 32369
+num samples of  per batch: 256 x 1.0 (batch_ratio) = 256
+--------------------------------------------------------------------------------
+Total_batch_size: 256 = 256
+--------------------------------------------------------------------------------
+dataset_root:    trainer/all_data/test	 dataset: /
+sub-directory:	/.	 num samples: 18036
+--------------------------------------------------------------------------------

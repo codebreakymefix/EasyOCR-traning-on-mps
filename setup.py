@@ -11,7 +11,7 @@ def readme():
     with open('README.md', encoding="utf-8-sig") as f:
         README = f.read()
     return README
-
+import easyocr
 setup(
     name='easyocr',
     packages=['easyocr'],
