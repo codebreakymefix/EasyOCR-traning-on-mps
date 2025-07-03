@@ -1,90 +1,45 @@
-[1/2] Train loss: 2.68706, Valid loss: 3.40759, Elapsed_time: 0.92075
-Current_accuracy : 36.150, Current_norm_ED  : 0.7123
-Best_accuracy    : 36.150, Best_norm_ED     : 0.7123
+[300/9000] Train loss: 0.22381, Valid loss: 0.23688, Elapsed_time: 144.22904
+Current_accuracy : 68.823, Current_norm_ED  : 0.9408
+Best_accuracy    : 68.823, Best_norm_ED     : 0.9408
 --------------------------------------------------------------------------------
 Ground Truth              | Prediction                | Confidence Score & T/F
 --------------------------------------------------------------------------------
-EXCHANGE ARE ALLOWED WITHIN | EXCHANGE ARE ALLOWED WIThIN | 0.0632	False
-BILL TO :                 | Bill To :                 | 0.4102	False
+*TOTAL QTY: 4.00          | *TOTAL QTY: 4.00          | 0.0302	True
+SELANGOR.                 | SELANGOR.                 | 0.0999	True
 --------------------------------------------------------------------------------
-[2/2] Train loss: 4.02208, Valid loss: 3.25144, Elapsed_time: 384.72768
-Current_accuracy : 35.529, Current_norm_ED  : 0.7064
-Best_accuracy    : 36.150, Best_norm_ED     : 0.7123
---------------------------------------------------------------------------------
-Ground Truth              | Prediction                | Confidence Score & T/F
---------------------------------------------------------------------------------
-TOTAL PAYABLE:            | Tocal Poyable:            | 0.2561	False
-TOTAL EXCLUDED TAX        | Tota) Exc hudled 'ax      | 0.0031	False
---------------------------------------------------------------------------------
-[1/2] Train loss: 3.08840, Valid loss: 3.37610, Elapsed_time: 0.84277
-Current_accuracy : 34.753, Current_norm_ED  : 0.7035
-Best_accuracy    : 34.753, Best_norm_ED     : 0.7035
+[600/9000] Train loss: 0.21332, Valid loss: 0.23179, Elapsed_time: 618.59919
+Current_accuracy : 68.984, Current_norm_ED  : 0.9412
+Best_accuracy    : 68.984, Best_norm_ED     : 0.9412
 --------------------------------------------------------------------------------
 Ground Truth              | Prediction                | Confidence Score & T/F
 --------------------------------------------------------------------------------
-TAX INVOICE / ADJUSTMENT NOTE | TAK  INVOICE / ADJUSTHENT  NOTE | 0.0036	False
-: THE PEAK QUARRY WORKS   | ;ThEPeAK Ouarry Works     | 0.0018	False
+AMOUNT (RM)               | AMOUNT (RM)               | 0.3982	True
+33.80                     | 33.80                     | 0.3398	True
 --------------------------------------------------------------------------------
-[2/2] Train loss: 3.38529, Valid loss: 3.12188, Elapsed_time: 368.00166
-Current_accuracy : 36.017, Current_norm_ED  : 0.7097
-Best_accuracy    : 36.017, Best_norm_ED     : 0.7097
---------------------------------------------------------------------------------
-Ground Truth              | Prediction                | Confidence Score & T/F
---------------------------------------------------------------------------------
-GST ID : 000431112192     | T I[ ' 006451112132       | 0.0007	False
-STRETCH FILM (100MMX120M) | Stretch Film (1oommx120m) | 0.1383	False
---------------------------------------------------------------------------------
-[2/2] Train loss: 3.17964, Valid loss: 3.22799, Elapsed_time: 3.46238
-Current_accuracy : 36.244, Current_norm_ED  : 0.7116
-Best_accuracy    : 36.244, Best_norm_ED     : 0.7116
+[900/9000] Train loss: 0.20739, Valid loss: 0.22740, Elapsed_time: 1137.59725
+Current_accuracy : 69.345, Current_norm_ED  : 0.9422
+Best_accuracy    : 69.345, Best_norm_ED     : 0.9422
 --------------------------------------------------------------------------------
 Ground Truth              | Prediction                | Confidence Score & T/F
 --------------------------------------------------------------------------------
-PREMIO                    | Peano                     | 0.0008	False
-5.00                      | 5-00                      | 0.4643	False
+TEL : 03-89486342         | TEL .03-89486342          | 0.0095	False
+: CS00012751              | : CS00012751              | 0.2286	True
 --------------------------------------------------------------------------------
-[200/1000] Train loss: 0.63275, Valid loss: 0.33169, Elapsed_time: 83.63067
-Current_accuracy : 63.456, Current_norm_ED  : 0.9246
-Best_accuracy    : 63.456, Best_norm_ED     : 0.9246
---------------------------------------------------------------------------------
-Ground Truth              | Prediction                | Confidence Score & T/F
---------------------------------------------------------------------------------
-CASH SALES COUNTER        | CASH SALES COUNTER        | 0.0568	True
-QTY                       | QTY                       | 0.6025	True
---------------------------------------------------------------------------------
-[400/1000] Train loss: 0.29674, Valid loss: 0.28858, Elapsed_time: 559.76311
-Current_accuracy : 65.719, Current_norm_ED  : 0.9316
-Best_accuracy    : 65.719, Best_norm_ED     : 0.9316
+[2025/8100] Train loss: 0.19145, Valid loss: 0.21340, Elapsed_time: 1047.87936
+Current_accuracy : 69.749, Current_norm_ED  : 0.9448
+Best_accuracy    : 69.749, Best_norm_ED     : 0.9448
 --------------------------------------------------------------------------------
 Ground Truth              | Prediction                | Confidence Score & T/F
 --------------------------------------------------------------------------------
-9557950605126             | 9557950605126             | 0.2295	True
-"LOT P.T. 2811, JALAN ANGSA," | LOT P.T. 2811., JALAN ANGSA. | 0.0029	False
+9.31                      | 9.31                      | 0.6292	True
+TOTAL INCL. GST@6%        | TOTAL INCL. GSI46%        | 0.0909	False
 --------------------------------------------------------------------------------
-[600/1000] Train loss: 0.26385, Valid loss: 0.26966, Elapsed_time: 976.96167
-Current_accuracy : 66.922, Current_norm_ED  : 0.9346
-Best_accuracy    : 66.922, Best_norm_ED     : 0.9346
---------------------------------------------------------------------------------
-Ground Truth              | Prediction                | Confidence Score & T/F
---------------------------------------------------------------------------------
-WWW.POPULAR.COM.MY        | WWW. POPULAR.COM. MY      | 0.0204	False
-TOTAL PAYABLE:            | TOTAL PAYABLE:            | 0.3034	True
---------------------------------------------------------------------------------
-[800/1000] Train loss: 0.24819, Valid loss: 0.25754, Elapsed_time: 1445.26597
-Current_accuracy : 67.482, Current_norm_ED  : 0.9364
-Best_accuracy    : 67.482, Best_norm_ED     : 0.9364
+[4050/8100] Train loss: 0.17805, Valid loss: 0.20817, Elapsed_time: 2454.69911
+Current_accuracy : 71.518, Current_norm_ED  : 0.9484
+Best_accuracy    : 71.518, Best_norm_ED     : 0.9484
 --------------------------------------------------------------------------------
 Ground Truth              | Prediction                | Confidence Score & T/F
 --------------------------------------------------------------------------------
-SR @ 6%                   | SR @ 6%                   | 0.1274	True
-1796                      | 4796                      | 0.3362	False
---------------------------------------------------------------------------------
-[1000/1000] Train loss: 0.23313, Valid loss: 0.24770, Elapsed_time: 1863.98498
-Current_accuracy : 68.114, Current_norm_ED  : 0.9384
-Best_accuracy    : 68.114, Best_norm_ED     : 0.9384
---------------------------------------------------------------------------------
-Ground Truth              | Prediction                | Confidence Score & T/F
---------------------------------------------------------------------------------
-"TAMPOI,81200 JOHOR BAHRU, JOHOR" | TAMPOI,81200 JOHOR BAHRU,JOHOR | 0.0254	False
-AMOUNT                    | AMOUNT                    | 0.8073	True
+ZRL                       | ZRL                       | 0.7371	True
+(RM)                      | (RM)                      | 0.7954	True
 --------------------------------------------------------------------------------

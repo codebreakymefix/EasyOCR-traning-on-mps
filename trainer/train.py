@@ -177,6 +177,7 @@ def train(opt, show_number = 2, amp=False):
         # train part
         optimizer.zero_grad(set_to_none=True)
         
+        #Fix this hardcoded device
         if amp:
             with autocast('cuda'):
                 image_tensors, labels = train_dataset.get_batch()
