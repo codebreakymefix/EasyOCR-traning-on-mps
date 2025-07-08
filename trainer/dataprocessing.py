@@ -1,0 +1,32 @@
+import pandas as pd
+from pathlib import Path
+import os
+
+root          = Path.cwd()
+jsonl_path    = root / "all_data" / "train" / "metadata.jsonl"
+images_dir    = root / "all_data" / "train"
+output_csv    = root / "all_data" / "train" / "output.csv"
+name_template = "{:05d}.jpg"
+# ────────────────────────────────────────────────────────────────────────
+print(os.path.exists(jsonl_path))
+print(jsonl_path)
+# 1) Read + sort
+df = (
+    #Json files
+    pd.read_json(jsonl_path, lines=True)
+      .sort_values("file_name")
+      .rename(columns={"file_name":"old_name", "text":"words"})
+      .reset_index(drop=True)
+)
+
+# 2) Build new filenames in a vectorized way
+df["filename"] = df.index.map(lambda i: name_template.format(i+1))
+
+# 3) Rename files on disk
+for old, new in zip(df["old_name"], df["filename"]):
+    src = images_dir/old
+    dst = images_dir/new
+    src.rename(dst)
+
+# 4) Write out just the two columns you need
+df[["filename","words"]].to_csv(output_csv, index=False)
