@@ -1,9 +1,9 @@
-number: ''
-symbol: ''
-lang_char: ' !"#$%&''()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ªÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿĀāĂăĄąĆćČčĎďĐđĒēĖėĘęĚěĞğĨĩĪīĮįİıĶķĹĺĻļĽľŁłŃńŅņŇňŒœŔŕŘřŚśŞşŠšŤťŨũŪūŮůŲųŸŹźŻżŽžƏƠơƯưȘșȚțə̇ḌḍḶḷṀṁṂṃṄṅṆṇṬṭẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘỘỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹ€'
-# number: '0123456789'
-# symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
-# lang_char: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+# number: ''
+# symbol: ''
+# lang_char: ' !"#$%&''()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ªÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿĀāĂăĄąĆćČčĎďĐđĒēĖėĘęĚěĞğĨĩĪīĮįİıĶķĹĺĻļĽľŁłŃńŅņŇňŒœŔŕŘřŚśŞşŠšŤťŨũŪūŮůŲųŸŹźŻżŽžƏƠơƯưȘșȚțə̇ḌḍḶḷṀṁṂṃṄṅṆṇṬṭẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘỘỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹ€'
+number: '0123456789'
+symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
+lang_char: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 experiment_name: 'en_filtered'
 train_data: 'all_data/train'
 valid_data: 'all_data/test'
@@ -12,7 +12,7 @@ workers: 12
 batch_size: 256 #32
 num_iter: 10000
 valInterval: 2000
-saved_model: 'saved_models/latin_g2.pth'
+saved_model: 'saved_models/english_g2.pth'
 FT: True
 optim: adam            # switch to Adam for sharper fine-tune
 lr: 5e-5               # moderate LR for head
@@ -45,6 +45,6 @@ input_channel: 1
 output_channel: 256
 hidden_size: 256
 decode: 'greedy'
-new_prediction: False
+new_prediction: True
 freeze_FeatureFxtraction: False
 freeze_SequenceModeling: False
