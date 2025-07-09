@@ -4,18 +4,18 @@
 number: '0123456789'
 symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
 lang_char: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-experiment_name: 'en_filtered'
+experiment_name: 'alr5e-6_9knewhfttpc89acc'
 train_data: 'all_data/train'
 valid_data: 'all_data/test'
 manualSeed: 1111
 workers: 12
 batch_size: 256 #32
-num_iter: 10000
-valInterval: 2000
-saved_model: 'saved_models/english_g2.pth'
+num_iter: 5000
+valInterval: 2500
+saved_model: 'saved_models/alr5e-5_4knewhfttpc89acc.pth'
 FT: True
 optim: adam            # switch to Adam for sharper fine-tune
-lr: 5e-5               # moderate LR for head
+lr: 5e-6               # moderate LR for head
 beta1: 0.9
 rho: 0.95
 eps: 1e-8

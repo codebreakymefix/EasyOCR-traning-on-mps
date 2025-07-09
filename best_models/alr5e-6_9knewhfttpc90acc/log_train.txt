@@ -1,0 +1,18 @@
+[2500/5000] Train loss: 0.73049, Valid loss: 0.07096, Elapsed_time: 802.23064
+Current_accuracy : 90.863, Current_norm_ED  : 0.9878
+Best_accuracy    : 90.863, Best_norm_ED     : 0.9878
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+VE05: AZLAN(3737)         | VE05: AZLAN(3737)         | 0.0760	True
+QTY                       | QTY                       | 0.5092	True
+--------------------------------------------------------------------------------
+[5000/5000] Train loss: 0.01105, Valid loss: 0.08604, Elapsed_time: 1769.37155
+Current_accuracy : 90.574, Current_norm_ED  : 0.9879
+Best_accuracy    : 90.863, Best_norm_ED     : 0.9879
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+PLEASE COME AGAIN.        | PLEASE COME AGAIN.        | 0.0791	True
+DISCOUNT :                | DISCOUNT :                | 0.5778	True
+--------------------------------------------------------------------------------
