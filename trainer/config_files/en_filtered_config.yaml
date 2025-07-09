@@ -15,11 +15,11 @@ valInterval: 2000
 saved_model: 'saved_models/latin_g2.pth'
 FT: True
 optim: adam            # switch to Adam for sharper fine-tune
-lr: 5e-4               # moderate LR for head
+lr: 5e-5               # moderate LR for head
 beta1: 0.9
 rho: 0.95
 eps: 1e-8
-grad_clip: 1.5 #Lowered from 5 to hopefully prevent exploding gradients
+grad_clip: 5 #Lowered from 5 to hopefully prevent exploding gradients
 
 #Data processing
 select_data: '' # this is dataset folder in train_data
@@ -47,4 +47,4 @@ hidden_size: 256
 decode: 'greedy'
 new_prediction: False
 freeze_FeatureFxtraction: False
-freeze_SequenceModeling: True
+freeze_SequenceModeling: False
