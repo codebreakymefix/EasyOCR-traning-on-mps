@@ -4,7 +4,7 @@
 number: '0123456789'
 symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
 lang_char: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-experiment_name: 'alr5e-6_9knewhfttpc89acc'
+experiment_name: 'a_5knewhfttpcresatt'
 train_data: 'all_data/train'
 valid_data: 'all_data/test'
 manualSeed: 1111
@@ -12,10 +12,11 @@ workers: 12
 batch_size: 256 #32
 num_iter: 5000
 valInterval: 2500
-saved_model: 'saved_models/alr5e-5_4knewhfttpc89acc.pth'
+# saved_model: 'saved_models/english_g2.pth'
+saved_model: ''
 FT: True
 optim: adam            # switch to Adam for sharper fine-tune
-lr: 5e-6               # moderate LR for head
+lr: 5e-4               # moderate LR for head
 beta1: 0.9
 rho: 0.95
 eps: 1e-8
@@ -37,9 +38,9 @@ data_filtering_off: False
 
 # Model Architecture
 Transformation: 'TPS' #TPS or None
-FeatureExtraction: 'VGG'
+FeatureExtraction: 'ResNet'
 SequenceModeling: 'BiLSTM'
-Prediction: 'CTC'
+Prediction: 'Attn'
 num_fiducial: 20
 input_channel: 1
 output_channel: 256
