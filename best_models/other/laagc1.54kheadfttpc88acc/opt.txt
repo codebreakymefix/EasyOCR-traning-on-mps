@@ -1,0 +1,46 @@
+------------ Options -------------
+number: 
+symbol: 
+lang_char:  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ªÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿĀāĂăĄąĆćČčĎďĐđĒēĖėĘęĚěĞğĨĩĪīĮįİıĶķĹĺĻļĽľŁłŃńŅņŇňŒœŔŕŘřŚśŞşŠšŤťŨũŪūŮůŲųŸŹźŻżŽžƏƠơƯưȘșȚțə̇ḌḍḶḷṀṁṂṃṄṅṆṇṬṭẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘỘỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹ€
+experiment_name: en_filtered
+train_data: all_data/train
+valid_data: all_data/test
+manualSeed: 1111
+workers: 12
+batch_size: 256
+num_iter: 10000
+valInterval: 2000
+saved_model: saved_models/latin_g2.pth
+FT: True
+optim: adam
+lr: 5e-4
+beta1: 0.9
+rho: 0.95
+eps: 1e-8
+grad_clip: 1.5
+select_data: ['']
+batch_ratio: ['1']
+total_data_usage_ratio: 1.0
+batch_max_length: 34
+imgH: 64
+imgW: 600
+rgb: False
+contrast_adjust: 0.0
+sensitive: True
+PAD: True
+data_filtering_off: False
+Transformation: TPS
+FeatureExtraction: VGG
+SequenceModeling: BiLSTM
+Prediction: CTC
+num_fiducial: 20
+input_channel: 1
+output_channel: 256
+hidden_size: 256
+decode: greedy
+new_prediction: False
+freeze_FeatureFxtraction: False
+freeze_SequenceModeling: True
+character:  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~ªÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿĀāĂăĄąĆćČčĎďĐđĒēĖėĘęĚěĞğĨĩĪīĮįİıĶķĹĺĻļĽľŁłŃńŅņŇňŒœŔŕŘřŚśŞşŠšŤťŨũŪūŮůŲųŸŹźŻżŽžƏƠơƯưȘșȚțə̇ḌḍḶḷṀṁṂṃṄṅṆṇṬṭẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘỘỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹ€
+num_class: 352
+---------------------------------------

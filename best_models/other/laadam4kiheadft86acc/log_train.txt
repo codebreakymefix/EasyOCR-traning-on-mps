@@ -1,0 +1,18 @@
+[2000/10000] Train loss: 0.08262, Valid loss: 0.08107, Elapsed_time: 358.61285
+Current_accuracy : 86.837, Current_norm_ED  : 0.9825
+Best_accuracy    : 86.837, Best_norm_ED     : 0.9825
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+11.90                     | 11.90                     | 0.6930	True
+KOBIS MERAH @1.60         | KOBIS MERAH @1.60         | 0.2811	True
+--------------------------------------------------------------------------------
+[4000/10000] Train loss: 0.03007, Valid loss: 0.08541, Elapsed_time: 873.19912
+Current_accuracy : 86.699, Current_norm_ED  : 0.9827
+Best_accuracy    : 86.837, Best_norm_ED     : 0.9827
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+TOTAL SALES INCLUSIVE GST @6% | TOTAL SALES INCLUSIVE GST @6% | 0.0921	True
+THANK YOU.                | THANK YOU.                | 0.4165	True
+--------------------------------------------------------------------------------
