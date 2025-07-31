@@ -13,3 +13,5 @@ ninja
 #Training
 #natsort
 #nltk
+#six
+#pandas
