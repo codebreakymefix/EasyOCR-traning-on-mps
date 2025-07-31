@@ -4,16 +4,16 @@
 number: '0123456789'
 symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
 lang_char: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-experiment_name: 'alr5e-4_5krgbnewhfttpc'
+experiment_name: 'alr5e-4_3krgbfttpc'
 train_data: 'all_data/train'
 valid_data: 'all_data/test'
 manualSeed: 1111
 workers: 12
 batch_size: 256 #32
-num_iter: 5000
-valInterval: 2500
-# saved_model: 'saved_models/adam10kheadft88acc.pth'
-saved_model: ''
+num_iter: 500
+valInterval: 250
+saved_model: 'saved_models/alr5e-4_5krgbfttpc88acc.pth'
+# saved_model: ''
 FT: True
 optim: adam            # switch to Adam for sharper fine-tune
 lr: 5e-4               # moderate LR for head
@@ -46,6 +46,6 @@ input_channel: 1
 output_channel: 256
 hidden_size: 256
 decode: 'greedy'
-new_prediction: True
+new_prediction: False
 freeze_FeatureFxtraction: False
 freeze_SequenceModeling: False
