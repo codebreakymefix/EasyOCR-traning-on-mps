@@ -4,16 +4,16 @@
 number: '0123456789'
 symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
 lang_char: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-experiment_name: 'a_12krgbnewhfttpcresattbeam'
+experiment_name: 'a_10krgbnewhfttpcresattbeam'
 train_data: 'all_data/train'
 valid_data: 'all_data/test'
 manualSeed: 1111
 workers: 12
 batch_size: 256 #32
-num_iter: 6000
+num_iter: 10000
 valInterval: 2000
-saved_model: 'saved_models/a_6krgbnewhfttpcresatt90acc.pth'
-# saved_model: ''
+# saved_model: 'saved_models/a_6krgbnewhfttpcresatt90acc.pth'
+saved_model: ''
 FT: True
 optim: adam            # switch to Adam for sharper fine-tune
 lr: 5e-4               # moderate LR for head
@@ -46,6 +46,7 @@ input_channel: 1
 output_channel: 256
 hidden_size: 256
 decode: 'beamsearch'
+# decode: 'greedy'
 new_prediction: True
 freeze_FeatureFxtraction: False
 freeze_SequenceModeling: False
