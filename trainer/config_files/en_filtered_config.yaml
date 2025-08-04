@@ -4,17 +4,17 @@
 number: '0123456789'
 symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
 lang_char: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-experiment_name: 'a_10krgbnewhfttpcresattbeam'
+experiment_name: 'a_14krgbnewhtpcresattbeam'
 train_data: 'all_data/train'
 valid_data: 'all_data/test'
 manualSeed: 1111
 workers: 12
 batch_size: 256 #32
-num_iter: 10000
+num_iter: 14000
 valInterval: 2000
 # saved_model: 'saved_models/a_6krgbnewhfttpcresatt90acc.pth'
 saved_model: ''
-FT: True
+FT: False
 optim: adam            # switch to Adam for sharper fine-tune
 lr: 5e-4               # moderate LR for head
 beta1: 0.9
