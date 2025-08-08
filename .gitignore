@@ -6,6 +6,7 @@ __pycache__/
 
 #Dataset
 trainer/all_data/
+trainer/image_test/
 
 # C extensions
 *.so

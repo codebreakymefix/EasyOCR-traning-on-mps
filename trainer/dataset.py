@@ -10,6 +10,7 @@ from natsort import natsorted
 from PIL import Image
 import numpy as np
 from torch.utils.data import Dataset, ConcatDataset, Subset
+from torchvision.transforms import v2
 from itertools import accumulate as _accumulate
 import torchvision.transforms as transforms
 
@@ -44,7 +45,7 @@ class Batch_Balanced_Dataset(object):
         log.write(f'dataset_root: {opt.train_data}\nopt.select_data: {opt.select_data}\nopt.batch_ratio: {opt.batch_ratio}\n')
         assert len(opt.select_data) == len(opt.batch_ratio)
 
-        _AlignCollate = AlignCollate(imgH=opt.imgH, imgW=opt.imgW, keep_ratio_with_pad=opt.PAD, contrast_adjust = opt.contrast_adjust)
+        _AlignCollate = AlignCollate(imgH=opt.imgH, imgW=opt.imgW, keep_ratio_with_pad=opt.PAD, contrast_adjust = opt.contrast_adjust, augment = opt.augment)
         self.data_loader_list = []
         self.dataloader_iter_list = []
         batch_size_list = []
@@ -225,11 +226,30 @@ class NormalizePAD(object):
 
 class AlignCollate(object):
 
-    def __init__(self, imgH=32, imgW=100, keep_ratio_with_pad=False, contrast_adjust = 0.):
+    def __init__(self, imgH=32, imgW=100, keep_ratio_with_pad=False, contrast_adjust = 0., augment = False):
         self.imgH = imgH
         self.imgW = imgW
         self.keep_ratio_with_pad = keep_ratio_with_pad
         self.contrast_adjust = contrast_adjust
+        self.augment = augment
+        self.transform_aug = v2.Compose([
+
+            # Adds sharpness to some images and overblows others
+            v2.RandomAdjustSharpness(sharpness_factor=2.0, p=0.3), 
+            v2.RandomPosterize(bits=4, p=0.2),
+
+            # Distorts the image in a certain way
+            v2.RandomAffine(degrees=20, shear=5, fill=255), 
+            v2.RandomPerspective(distortion_scale=0.5, p=0.5, fill=255),
+
+            # Erases part of the image
+            v2.RandomErasing(scale=(0.02, 0.1), ratio=(0.3, 3.3), p=0.5, value=255),
+
+            # Messes with the image slighty
+            v2.RandomGrayscale(p=0.1),
+            v2.RandomInvert(p=0.5),
+            v2.ColorJitter(brightness=0.3, contrast=0.3, saturation=0.3, hue=0.1)
+        ])
 
     def __call__(self, batch):
         batch = filter(lambda x: x is not None, batch)
@@ -239,7 +259,7 @@ class AlignCollate(object):
             resized_max_w = self.imgW
             input_channel = 3 if images[0].mode == 'RGB' else 1
             transform = NormalizePAD((input_channel, self.imgH, resized_max_w))
-
+            
             resized_images = []
             for image in images:
                 w, h = image.size
@@ -249,6 +269,9 @@ class AlignCollate(object):
                     image = np.array(image.convert("L"))
                     image = adjust_contrast_grey(image, target = self.contrast_adjust)
                     image = Image.fromarray(image, 'L')
+
+                if self.augment and (w > 5) and (h > 5):
+                        image = self.transform_aug(image)
 
                 ratio = w / float(h)
                 if math.ceil(self.imgH * ratio) > self.imgW:
