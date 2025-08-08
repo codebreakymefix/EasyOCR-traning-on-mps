@@ -4,11 +4,11 @@
 number: '0123456789'
 symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
 lang_char: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-experiment_name: 'a_14krgbnewhtpcresattbeam'
+experiment_name: 'a_14kaugrgbtpcresattbeam'
 train_data: 'all_data/train'
 valid_data: 'all_data/test'
 manualSeed: 1111
-workers: 12
+workers: 18
 batch_size: 256 #32
 num_iter: 14000
 valInterval: 2000
@@ -35,6 +35,7 @@ sensitive: True
 PAD: True
 contrast_adjust: 0.0
 data_filtering_off: False
+augment: True
 
 # Model Architecture
 Transformation: 'TPS' #TPS or None
