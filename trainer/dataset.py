@@ -233,22 +233,24 @@ class AlignCollate(object):
         self.contrast_adjust = contrast_adjust
         self.augment = augment
         self.transform_aug = v2.Compose([
+            
+            # Messes with the image slighty
+            # v2.RandomGrayscale(p=0.1),
+            # v2.RandomInvert(p=0.5),
 
-            # Adds sharpness to some images and overblows others
-            v2.RandomAdjustSharpness(sharpness_factor=2.0, p=0.3), 
+            # Adds sharpness to some images
+            v2.RandomAdjustSharpness(sharpness_factor=2.0, p=0.3),
+            
+            v2.ColorJitter(brightness=0.3, contrast=0.3, saturation=0.3, hue=0.1),
             v2.RandomPosterize(bits=4, p=0.2),
 
             # Distorts the image in a certain way
-            v2.RandomAffine(degrees=20, shear=5, fill=255), 
+            v2.RandomAffine(degrees=20, shear=5, fill=255),
             v2.RandomPerspective(distortion_scale=0.5, p=0.5, fill=255),
-
+            
             # Erases part of the image
-            v2.RandomErasing(scale=(0.02, 0.1), ratio=(0.3, 3.3), p=0.5, value=255),
+            v2.RandomErasing(scale=(0.02, 0.1), ratio=(0.3, 3.3), p=0.5, value=255)
 
-            # Messes with the image slighty
-            v2.RandomGrayscale(p=0.1),
-            v2.RandomInvert(p=0.5),
-            v2.ColorJitter(brightness=0.3, contrast=0.3, saturation=0.3, hue=0.1)
         ])
 
     def __call__(self, batch):

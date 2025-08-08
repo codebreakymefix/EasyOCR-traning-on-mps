@@ -4,7 +4,7 @@
 number: '0123456789'
 symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
 lang_char: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-experiment_name: 'a_6knewaugrgbtpcresattbeam'
+experiment_name: 'a_12kaug1.0rgbtpcresattbeam'
 train_data: 'all_data/train'
 valid_data: 'all_data/test'
 manualSeed: 1111
@@ -12,11 +12,11 @@ workers: 18
 batch_size: 256 #32
 num_iter: 6000
 valInterval: 2000
-# saved_model: 'saved_models/a_6krgbnewhfttpcresatt90acc.pth'
-saved_model: ''
-FT: False
+saved_model: 'saved_models/a_6knewaug0.5rgbtpcresattbeam85acc.pth'
+# saved_model: ''
+FT: True
 optim: adam            # switch to Adam for sharper fine-tune
-lr: 5e-4               # moderate LR for head
+lr: 5e-5              # moderate LR for head
 beta1: 0.9
 rho: 0.95
 eps: 1e-8
