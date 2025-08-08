@@ -4,13 +4,13 @@
 number: '0123456789'
 symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
 lang_char: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-experiment_name: 'a_14kaugrgbtpcresattbeam'
+experiment_name: 'a_6knewaugrgbtpcresattbeam'
 train_data: 'all_data/train'
 valid_data: 'all_data/test'
 manualSeed: 1111
 workers: 18
 batch_size: 256 #32
-num_iter: 14000
+num_iter: 6000
 valInterval: 2000
 # saved_model: 'saved_models/a_6krgbnewhfttpcresatt90acc.pth'
 saved_model: ''
