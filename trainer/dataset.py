@@ -239,17 +239,17 @@ class AlignCollate(object):
             # v2.RandomInvert(p=0.5),
 
             # Adds sharpness to some images
-            v2.RandomAdjustSharpness(sharpness_factor=2.0, p=0.3),
+            v2.RandomAdjustSharpness(sharpness_factor=2.0, p=0.1),
             
             v2.ColorJitter(brightness=0.3, contrast=0.3, saturation=0.3, hue=0.1),
-            v2.RandomPosterize(bits=4, p=0.2),
+            v2.RandomPosterize(bits=4, p=0.1),
 
             # Distorts the image in a certain way
-            v2.RandomAffine(degrees=20, shear=5, fill=255),
-            v2.RandomPerspective(distortion_scale=0.5, p=0.5, fill=255),
+            v2.RandomAffine(degrees=15, shear=5, fill=255),
+            v2.RandomPerspective(distortion_scale=0.5, p=0.2, fill=255),
             
             # Erases part of the image
-            v2.RandomErasing(scale=(0.02, 0.1), ratio=(0.3, 3.3), p=0.5, value=255)
+            v2.RandomErasing(scale=(0.02, 0.1), ratio=(0.3, 3.3), p=0.2, value=255)
 
         ])
 
@@ -283,7 +283,7 @@ class AlignCollate(object):
 
                 resized_image = image.resize((resized_w, self.imgH), Image.BICUBIC)
                 resized_images.append(transform(resized_image))
-                # resized_image.save('./image_test/%d_test.jpg' % w)
+                resized_image.save('./image_test/%d_test.jpg' % w)
 
             image_tensors = torch.cat([t.unsqueeze(0) for t in resized_images], 0)
 

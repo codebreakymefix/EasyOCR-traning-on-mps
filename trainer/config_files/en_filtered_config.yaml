@@ -4,17 +4,17 @@
 number: '0123456789'
 symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
 lang_char: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-experiment_name: 'a_12kaug1.0rgbtpcresattbeam'
+experiment_name: 'alr5e-5_9kaugnewhfttpc'
 train_data: 'all_data/train'
 valid_data: 'all_data/test'
 manualSeed: 1111
 workers: 18
 batch_size: 256 #32
-num_iter: 6000
-valInterval: 2000
-saved_model: 'saved_models/a_6knewaug0.5rgbtpcresattbeam85acc.pth'
+num_iter: 300
+valInterval: 100
+saved_model: 'saved_models/alr5e-6_9knewhfttpc90acc*.pth'
 # saved_model: ''
-FT: True
+FT: False
 optim: adam            # switch to Adam for sharper fine-tune
 lr: 5e-5              # moderate LR for head
 beta1: 0.9
@@ -29,7 +29,7 @@ total_data_usage_ratio: 1.0
 batch_max_length: 34 
 imgH: 64
 imgW: 600
-rgb: True
+rgb: False
 contrast_adjust: False
 sensitive: True
 PAD: True
@@ -39,15 +39,15 @@ augment: True
 
 # Model Architecture
 Transformation: 'TPS' #TPS or None
-FeatureExtraction: 'ResNet'
+FeatureExtraction: 'VGG'
 SequenceModeling: 'BiLSTM'
-Prediction: 'Attn'
+Prediction: 'CTC'
 num_fiducial: 20
 input_channel: 1
 output_channel: 256
 hidden_size: 256
-decode: 'beamsearch'
-# decode: 'greedy'
+# decode: 'beamsearch'
+decode: 'greedy'
 new_prediction: False #Set this to false when using Attn or loading models.
 freeze_FeatureFxtraction: False
 freeze_SequenceModeling: False

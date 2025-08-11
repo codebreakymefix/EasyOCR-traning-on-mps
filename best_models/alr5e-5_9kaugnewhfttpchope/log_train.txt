@@ -1,0 +1,9 @@
+[2/2] Train loss: 3.09075, Valid loss: 0.07187, Elapsed_time: 4.84349
+Current_accuracy : 90.780, Current_norm_ED  : 0.9875
+Best_accuracy    : 90.780, Best_norm_ED     : 0.9875
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+SERVICE CHARGE:           | SERVICE CHARGE:           | 0.0154	True
+STAT-BUY 2@RM 13          | STAT-BUY 2@RM 13          | 0.1168	True
+--------------------------------------------------------------------------------
