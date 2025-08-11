@@ -1,0 +1,90 @@
+[2/20] Train loss: 1.71517, Valid loss: 0.07168, Elapsed_time: 15.76150
+Current_accuracy : 90.707, Current_norm_ED  : 0.9874
+Best_accuracy    : 90.707, Best_norm_ED     : 0.9874
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+LIKE AND FOLLOW US ON FACEBOOK! | LIKE AND FOLLOW US ON FACEBOOK! | 0.0987	True
+GST SUMMARY               | GST SUMMARY               | 0.0392	True
+--------------------------------------------------------------------------------
+[4/20] Train loss: 1.69002, Valid loss: 0.07216, Elapsed_time: 122.89557
+Current_accuracy : 90.724, Current_norm_ED  : 0.9875
+Best_accuracy    : 90.724, Best_norm_ED     : 0.9875
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+"BANDAR UTAMA BATANG KALI," | "BANDAR UTAMA BATANG KAL," | 0.1300	False
+: USER                    | : USER                    | 0.3590	True
+--------------------------------------------------------------------------------
+[6/20] Train loss: 1.32789, Valid loss: 0.10058, Elapsed_time: 223.85573
+Current_accuracy : 89.094, Current_norm_ED  : 0.9849
+Best_accuracy    : 90.724, Best_norm_ED     : 0.9875
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+"NO. 939, BATU LIMA,"     | "NO. 939, BATU LIMA,"     | 0.0074	True
+SUB-TOTAL                 | 8BUB-TOTAL                | 0.0757	False
+--------------------------------------------------------------------------------
+[8/20] Train loss: 1.19810, Valid loss: 0.08473, Elapsed_time: 337.69120
+Current_accuracy : 86.810, Current_norm_ED  : 0.9821
+Best_accuracy    : 90.724, Best_norm_ED     : 0.9875
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+4                         | 4                         | 0.8963	True
+SUN-THU:1000 HRS - 2200 HRS | SUN-THO:1000 HRS - 2200 HRS | 0.0034	False
+--------------------------------------------------------------------------------
+[10/20] Train loss: 1.12835, Valid loss: 0.08050, Elapsed_time: 437.52587
+Current_accuracy : 85.912, Current_norm_ED  : 0.9817
+Best_accuracy    : 90.724, Best_norm_ED     : 0.9875
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+UNIT AMT EXC. AMT INC. GST | UNITAMT EXC. AMT INC. GST | 0.0024	False
+FAX: 07-3889981           | FAX: 07-3889981           | 0.0486	True
+--------------------------------------------------------------------------------
+[12/20] Train loss: 0.98236, Valid loss: 0.07855, Elapsed_time: 536.97198
+Current_accuracy : 86.266, Current_norm_ED  : 0.9823
+Best_accuracy    : 90.724, Best_norm_ED     : 0.9875
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+TAX INVOICE# 1/A-42210-138075 | TAX INVOICE# 1/A-42210-138075 | 0.0069	True
+9500 MASSIMO WHEAT GERM 400 | 1500 MASSIMO WHEAT GERM 400 | 0.0151	False
+--------------------------------------------------------------------------------
+[14/20] Train loss: 0.90703, Valid loss: 0.08070, Elapsed_time: 636.43803
+Current_accuracy : 87.287, Current_norm_ED  : 0.9831
+Best_accuracy    : 90.724, Best_norm_ED     : 0.9875
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+PAY                       | PAY                       | 0.6451	True
+2                         | 2                         | 0.9760	True
+--------------------------------------------------------------------------------
+[16/20] Train loss: 0.87072, Valid loss: 0.07496, Elapsed_time: 736.20506
+Current_accuracy : 88.240, Current_norm_ED  : 0.9847
+Best_accuracy    : 90.724, Best_norm_ED     : 0.9875
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+TOTAL QUANTITY(S): 3      | TOTAL QUANTITY(S): 3      | 0.0708	True
+TAMAN DESA 43800          | TAMAN DESA 43800          | 0.0337	True
+--------------------------------------------------------------------------------
+[18/20] Train loss: 0.84998, Valid loss: 0.06966, Elapsed_time: 835.58936
+Current_accuracy : 88.634, Current_norm_ED  : 0.9851
+Best_accuracy    : 90.724, Best_norm_ED     : 0.9875
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+1 X                       | 1 X                       | 0.7626	True
+22.60                     | 22.60                     | 0.8332	True
+--------------------------------------------------------------------------------
+[20/20] Train loss: 0.81457, Valid loss: 0.06942, Elapsed_time: 934.90581
+Current_accuracy : 88.523, Current_norm_ED  : 0.9851
+Best_accuracy    : 90.724, Best_norm_ED     : 0.9875
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+TOTAL AFTER ADJ INCL GST  | TOTAL AFTER ADJ INCL GST  | 0.0025	True
+Z:ZERO RATED              | Z:ZERO RATED              | 0.2822	True
+--------------------------------------------------------------------------------
