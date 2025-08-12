@@ -4,15 +4,15 @@
 number: '0123456789'
 symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
 lang_char: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-experiment_name: 'alr5e-5_9.02kaugnewhfttpc'
+experiment_name: 'a_16.5kaugrgbnewhfttpcresatt90acc'
 train_data: 'all_data/train'
 valid_data: 'all_data/test'
 manualSeed: 1111
 workers: 18
 batch_size: 256 #32
-num_iter: 20
-valInterval: 2
-saved_model: 'saved_models/alr5e-6_9knewhfttpc90acc*.pth'
+num_iter: 1500
+valInterval: 750
+saved_model: 'saved_models/best_accuracy.pth'
 # saved_model: ''
 FT: False
 optim: adam            # switch to Adam for sharper fine-tune
@@ -29,21 +29,21 @@ total_data_usage_ratio: 1.0
 batch_max_length: 34 
 imgH: 64
 imgW: 600
-rgb: False
+rgb: True
 contrast_adjust: False
 sensitive: True
 PAD: True
 contrast_adjust: 0.0
 data_filtering_off: False
-augment: False
+augment: True
 
 # Model Architecture
 Transformation: 'TPS' #TPS or None
-FeatureExtraction: 'VGG'
+FeatureExtraction: 'ResNet'
 SequenceModeling: 'BiLSTM'
-Prediction: 'CTC'
+Prediction: 'Attn'
 num_fiducial: 20
-input_channel: 1
+input_channel: 3
 output_channel: 256
 hidden_size: 256
 # decode: 'beamsearch'

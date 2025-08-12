@@ -1,0 +1,18 @@
+[1000/3000] Train loss: 0.04769, Valid loss: 0.47228, Elapsed_time: 652.53126
+Current_accuracy : 89.066, Current_norm_ED  : 0.9835
+Best_accuracy    : 89.066, Best_norm_ED     : 0.9835
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+DISCOUNT                  | DISCOUNT                  | 0.9988	True
+GST SUMMARY               | GST SUMMARY               | 0.9148	True
+--------------------------------------------------------------------------------
+[2000/3000] Train loss: 0.02116, Valid loss: 0.48685, Elapsed_time: 1359.59481
+Current_accuracy : 88.445, Current_norm_ED  : 0.9819
+Best_accuracy    : 89.066, Best_norm_ED     : 0.9835
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+ROUNDING ADJ.             | ROUNDING ADJ.             | 0.5467	True
+A3B                       | A38                       | 0.9683	False
+--------------------------------------------------------------------------------

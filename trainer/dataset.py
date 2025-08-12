@@ -236,20 +236,20 @@ class AlignCollate(object):
             
             # Messes with the image slighty
             # v2.RandomGrayscale(p=0.1),
-            # v2.RandomInvert(p=0.5),
+            # v2.RandomInvert(p=0.05),
 
             # Adds sharpness to some images
-            v2.RandomAdjustSharpness(sharpness_factor=2.0, p=0.1),
+            v2.RandomAdjustSharpness(sharpness_factor=1.5, p=0.15),
             
-            v2.ColorJitter(brightness=0.3, contrast=0.3, saturation=0.3, hue=0.1),
-            v2.RandomPosterize(bits=4, p=0.1),
+            v2.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1),
+            v2.RandomPosterize(bits=6, p=0.15),
 
             # Distorts the image in a certain way
-            v2.RandomAffine(degrees=15, shear=5, fill=255),
-            v2.RandomPerspective(distortion_scale=0.5, p=0.2, fill=255),
+            v2.RandomAffine(degrees=10, shear=3, fill=255),
+            v2.RandomPerspective(distortion_scale=0.4, p=0.15, fill=255),
             
             # Erases part of the image
-            v2.RandomErasing(scale=(0.02, 0.1), ratio=(0.3, 3.3), p=0.2, value=255)
+            v2.RandomErasing(scale=(0.02, 0.1), ratio=(0.3, 3.3), p=0.15, value=255)
 
         ])
 
@@ -259,7 +259,7 @@ class AlignCollate(object):
 
         if self.keep_ratio_with_pad:  # same concept with 'Rosetta' paper
             resized_max_w = self.imgW
-            input_channel = 3 if images[0].mode == 'RGB' else 1
+d
             transform = NormalizePAD((input_channel, self.imgH, resized_max_w))
             
             resized_images = []
