@@ -1,0 +1,45 @@
+[200/1000] Train loss: 0.15797, Valid loss: 0.06717, Elapsed_time: 52.71612
+Current_accuracy : 88.845, Current_norm_ED  : 0.9858
+Best_accuracy    : 88.845, Best_norm_ED     : 0.9858
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+18.80                     | 18.80                     | 0.3098	True
+G.DRAGON CHIVES (S)       | G. DRAGON CHIVES (S)      | 0.0833	False
+--------------------------------------------------------------------------------
+[400/1000] Train loss: 0.15676, Valid loss: 0.06641, Elapsed_time: 209.03999
+Current_accuracy : 90.403, Current_norm_ED  : 0.9871
+Best_accuracy    : 90.403, Best_norm_ED     : 0.9871
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+GST EXCL -- GST AMT       | GST EXCL -- GST AMT       | 0.3524	True
+70448257                  | 70448257                  | 0.1127	True
+--------------------------------------------------------------------------------
+[600/1000] Train loss: 0.14449, Valid loss: 0.05859, Elapsed_time: 359.94129
+Current_accuracy : 90.225, Current_norm_ED  : 0.9877
+Best_accuracy    : 90.403, Best_norm_ED     : 0.9877
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+RECEIPT NO.:001-1402935   | RECEMPT NO. :001-1402935  | 0.0422	False
+DISC                      | DISC                      | 0.5506	True
+--------------------------------------------------------------------------------
+[800/1000] Train loss: 0.13264, Valid loss: 0.05633, Elapsed_time: 513.15007
+Current_accuracy : 90.774, Current_norm_ED  : 0.9889
+Best_accuracy    : 90.774, Best_norm_ED     : 0.9889
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+KOH SENG HARDWARE         | KOH SENG HARDWARE         | 0.3817	True
+0                         | 0                         | 0.8843	True
+--------------------------------------------------------------------------------
+[1000/1000] Train loss: 0.12179, Valid loss: 0.05804, Elapsed_time: 663.37456
+Current_accuracy : 90.935, Current_norm_ED  : 0.9888
+Best_accuracy    : 90.935, Best_norm_ED     : 0.9889
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+KEDAI PAPAN YEW CHUAN     | KEDAI PAPAN YEW CHUAN     | 0.1022	True
+ITEM COUNT: 3             | ITEM COUNT: 3             | 0.1780	True
+--------------------------------------------------------------------------------

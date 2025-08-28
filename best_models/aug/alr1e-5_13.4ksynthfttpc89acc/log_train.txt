@@ -1,0 +1,18 @@
+[250/500] Train loss: 0.12581, Valid loss: 0.06544, Elapsed_time: 64.07621
+Current_accuracy : 89.915, Current_norm_ED  : 0.9869
+Best_accuracy    : 89.915, Best_norm_ED     : 0.9869
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+94.34                     | 94.34                     | 0.5283	True
+TAX CODE                  | TAX CODE                  | 0.2058	True
+--------------------------------------------------------------------------------
+[500/500] Train loss: 0.11705, Valid loss: 0.06458, Elapsed_time: 233.33737
+Current_accuracy : 89.748, Current_norm_ED  : 0.9866
+Best_accuracy    : 89.915, Best_norm_ED     : 0.9869
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+LA STATIONERY SDN BHD (640899-P) | LA STATIONERY SDN BHD (640899-P) | 0.0671	True
+CASHIER: THANDAR          | CASHIER: NICOLE           | 0.1693	False
+--------------------------------------------------------------------------------

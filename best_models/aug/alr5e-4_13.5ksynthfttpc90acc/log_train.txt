@@ -1,0 +1,45 @@
+[200/1000] Train loss: 0.14303, Valid loss: 0.05974, Elapsed_time: 52.22568
+Current_accuracy : 90.585, Current_norm_ED  : 0.9877
+Best_accuracy    : 90.585, Best_norm_ED     : 0.9877
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+Q02 OYSTER MEE SUA        | 002 OYSTER MEE SUA        | 0.1898	False
+TOTAL SALES (INCL. GST @6%) | TOTAL SALES (INCL. GST @6%) | 0.0218	True
+--------------------------------------------------------------------------------
+[400/1000] Train loss: 0.12097, Valid loss: 0.05877, Elapsed_time: 207.41356
+Current_accuracy : 90.857, Current_norm_ED  : 0.9882
+Best_accuracy    : 90.857, Best_norm_ED     : 0.9882
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+SR: WELDRO PICKLING GEL 1KG | SR: WELORO PICKLING GEL 1KG | 0.1008	False
+0.00                      | 0.00                      | 0.7629	True
+--------------------------------------------------------------------------------
+[600/1000] Train loss: 0.13086, Valid loss: 0.06287, Elapsed_time: 361.17876
+Current_accuracy : 89.660, Current_norm_ED  : 0.9866
+Best_accuracy    : 90.857, Best_norm_ED     : 0.9882
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+"1-G,JALAN OS 1/3,ONE SELAYANG" | "1-G,JALAN OS 1/3,ONE SELAYANG | 0.0214	False
+0                         | 0                         | 0.9748	True
+--------------------------------------------------------------------------------
+[800/1000] Train loss: 0.14662, Valid loss: 0.18720, Elapsed_time: 512.30890
+Current_accuracy : 79.125, Current_norm_ED  : 0.9680
+Best_accuracy    : 90.857, Best_norm_ED     : 0.9882
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+39.77                     |  39.77                    | 0.1756	False
+TOTAL 0% SUPPLIES:        |  TOTAL 0% SUPPLIES:       | 0.0033	False
+--------------------------------------------------------------------------------
+[1000/1000] Train loss: nan, Valid loss: nan, Elapsed_time: 666.11436
+Current_accuracy : 0.000, Current_norm_ED  : 0.0000
+Best_accuracy    : 90.857, Best_norm_ED     : 0.9882
+--------------------------------------------------------------------------------
+Ground Truth              | Prediction                | Confidence Score & T/F
+--------------------------------------------------------------------------------
+SWEETIE POTATO BUN        |                           | nan	False
+U.PRICE                   |                           | nan	False
+--------------------------------------------------------------------------------

@@ -4,23 +4,23 @@
 number: '0123456789'
 symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
 lang_char: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
-experiment_name: 'a_16.5kaugrgbnewhfttpcresatt90acc'
+experiment_name: 'alr1e-5_15.9ksynthfttpc'
 train_data: 'all_data/train'
 valid_data: 'all_data/test'
 manualSeed: 1111
 workers: 18
 batch_size: 256 #32
-num_iter: 1500
-valInterval: 750
+num_iter: 2000
+valInterval: 250
 saved_model: 'saved_models/best_accuracy.pth'
 # saved_model: ''
 FT: False
 optim: adam            # switch to Adam for sharper fine-tune
-lr: 5e-5              # moderate LR for head
+lr: 1e-5              # moderate LR for head
 beta1: 0.9
 rho: 0.95
 eps: 1e-8
-grad_clip: 5 #Lowered from 5 to hopefully prevent exploding gradients
+grad_clip: 4 #Lowered from 5 to hopefully prevent exploding gradients
 
 #Data processing
 select_data: '' # this is dataset folder in train_data
@@ -29,7 +29,7 @@ total_data_usage_ratio: 1.0
 batch_max_length: 34 
 imgH: 64
 imgW: 600
-rgb: True
+rgb: False
 contrast_adjust: False
 sensitive: True
 PAD: True
@@ -39,15 +39,15 @@ augment: True
 
 # Model Architecture
 Transformation: 'TPS' #TPS or None
-FeatureExtraction: 'ResNet'
+FeatureExtraction: 'VGG'
 SequenceModeling: 'BiLSTM'
-Prediction: 'Attn'
+Prediction: 'CTC'
 num_fiducial: 20
-input_channel: 3
+input_channel: 1
 output_channel: 256
 hidden_size: 256
 # decode: 'beamsearch'
 decode: 'greedy'
 new_prediction: False #Set this to false when using Attn or loading models.
 freeze_FeatureFxtraction: False
-freeze_SequenceModeling: False
+freeze_SequenceModeling: False 
